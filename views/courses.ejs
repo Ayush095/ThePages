@@ -1,0 +1,81 @@
+<%-include("partials/header")-%>
+<% if(msg !=''){%>
+       <div class="alert alert-success mt-5 pt-5 mb-0 pb-0">
+     <strong>Success!</strong> <%= msg %> (<%=qty%>)
+         </div>
+     <% } %>
+
+<div class="row justify-content-center" style="margin-top:90px;margin-bottom:10px;">
+
+<div class="col-md-6 mx-auto ">
+  <form class=" mx-auto  " method="GET" action="/courses">
+    <input type="text"placeholder="Name,instructor Name or courseprovider"  class="form-control border-primary rounded py-3  " style="z-index:20;opacity:1;"  name="searchCourse" data-aos="flip-left">
+
+    </form>
+</div>
+<div class="col-md-6 my-1 ">
+  <%  if(qty>0){%>
+  <a href="/addtocart" class="float-right mx-5 h6"><i class="fa fa-shopping-cart fa-3x   " aria-hidden="true"></i>
+
+    (<%=qty%>)
+
+  </a>
+   <% } %>
+</div>
+</div>
+
+<div class="row  justify-content-center pt-2 px-3">
+  <%results.forEach(function(result){%>
+    <div class="col-md-4 col-6 ">
+        <div class="product-grid7 shadow-sm p-3 mb-5 bg-white rounded shadow" data-aos="fade-up">
+            <div class="product-image7 shadow">
+
+                  <a href="/courses/detailcourses/<%=result._id%>"><img class="course-page-pic-1 bookpic" style="width:100%;height:255px;  object-fit:cover;" src="/uploads/<%=result.courseImage%>"></a>
+     <%if(result.courseProvider=='Udemy'){%>
+      <a href="/courses/detailcourses/<%=result._id%>"><img class="course-page-pic-2 bookpic" style="width:100%;height:255px;  object-fit:cover;" src="/images/course-page-udemy-sale.gif"></a>
+     <%}%>
+
+     <% if(result.courseProvider=='coursera'){%>
+      <a href="/courses/detailcourses/<%=result._id%>"><img class="course-page-pic-2 bookpic" style="width:100%;height:255px;  object-fit:cover;" src="images/coursera-logo1.svg"></a>
+     <%}%>
+
+     <% if(result.courseProvider=='Edx'){%>
+      <a href="/courses/detailcourses/<%=result._id%>"><img class="course-page-pic-2 bookpic" style="width:100%;height:255px;  object-fit:cover; opacity:1;" src="images/edx-logo.svg"></a>
+     <%}%>
+
+     <% if(result.courseProvider=='Udacity'){%>
+      <a href="/courses/detailcourses/<%=result._id%>"><img class="course-page-pic-2 bookpic" style="width:100%;height:255px;  object-fit:cover;" src="https://venturebeat.com/wp-content/uploads/2019/03/3f825dfb-5717-489e-b972-e1df8b9723c3.png?resize=1200%2C600&strip=all"></a>
+     <%}%>
+     <% if(result.courseProvider=='GeeksforGeeks'){%>
+      <a href="/courses/detailcourses/<%=result._id%>"><img class="course-page-pic-2 bookpic" style="width:100%;height:255px;  object-fit:cover;" src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png"></a>
+     <%}%>
+     <% if(result.courseProvider=='Others'){%>
+      <a href="/courses/detailcourses/<%=result._id%>"><img class="course-page-pic-2 bookpic" style="width:100%;height:255px;  object-fit:cover;" src="/uploads/<%=result.courseImage%>"></a>
+     <%}%>
+
+                <ul class="social">
+                    <li><a href="/courses/detailcourses/<%=result._id%>" class="fa fa-shopping-bag"></a></li>
+                    <li><a href="/addcourse/<%=result._id%>" class="fa fa-shopping-cart"></a></li>
+                </ul>
+                <span class="product-new-label">New</span>
+            </div>
+            <div class="product-content">
+                <h3 class="title"><a href="#"><%=result.courseName%></a></h3>
+                <div class="price">Rs<%=result.discountedPrice%>.00
+
+                    <span>Rs<%=result.actualPrice%>.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%})%>
+
+    <%-include("partials/hr")-%>
+</div>
+
+
+
+
+
+<%-include("partials/footer")-%>

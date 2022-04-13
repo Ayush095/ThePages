@@ -1,0 +1,96 @@
+<%-include("partials/header")-%>
+<% if(success ==='Upload successfull See in book section your product added'){%>
+       <div class="alert alert-success mt-5 pt-5">
+     <strong>Success!</strong> <%= success %>
+         </div>
+     <% } %>
+     <% if(success ==="ERROR OCCURED:it seems that you have not given the correct data-type"){%>
+            <div class="alert alert-danger mt-5 pt-5">
+          <strong>ERROR</strong> <%= success %>
+              </div>
+          <% } %>
+<div class="row basic-margin px-3">
+  <div class="col-md-5 col-12 mt-5 mx-auto mb-5">
+    <div class="card  d-inline">
+    <div class="mt-4">
+    <div class="upload-page-modal" data-aos-duration="500" data-aos="fade-up">
+      <div id="upload-page-profile" class="card-header" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2500">
+        <div class=" bordr border-primary"></div>
+        <label for="" class=" bordr border-primary">Click to browse or drag an image here</label></div>
+    <form class="" id="form1" action="/upload-book" method="POST"enctype="multipart/form-data" >
+        <input type="text" name="WriterName" value="" required class=" mt-4 py-2" data-aos-duration="900" data-aos="fade-up" placeholder="Author" <i class="fa fa-pencil"></i>
+    <%-include("partials/hr")-%>
+     <div class="my-4">
+       <div class="stat">
+         <div class="label">Shots</div>
+          <div class="num">40</div>
+        </div>
+        <div class="stat">
+          <div class="label">Projects</div>
+          <div class="num">1</div>
+        </div>
+
+     </div>
+
+    </div>
+    </div>
+    </div>
+
+      <input type="file" id="upload-page-mediaFile" required  name="bookImage" />
+      <!-- <button id="primaryButton" type="submit" value="Upload" name="button" class="btn btn-primary btn-xs mx-auto ml-5">Upload Image</button> -->
+    <!-- </form> -->
+
+  </div>
+  <div class="col-md-5 offset-md-1 shadow mt-5" data-aos-duration="500" data-aos="fade-up"">
+    <div class=" card-body">
+        <h2 class="h3 text-primary my-3">Book Info</h2>
+        <form method="POST" id="form2" action="/upload-book" data-aos-duration="1000" data-aos="fade-up">
+          <div class="form-group">
+              <input class="form-control" required type="text" placeholder="Subject" name="subject">
+          </div>
+
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder=" Something about book" name="Something">
+                <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+          </div>
+
+          <div class="form-group">
+              <input class="form-control" type="text" required placeholder="BookName" name="BookName">
+          </div>
+          <div class="form-group">
+              <input class="form-control" type="text" required placeholder="Actual Price" name="actualprice">
+          </div>
+          <div class="form-group">
+              <input class="form-control" type="text" required placeholder="discounted Price" name="discountedPrice">
+          </div>
+          <%if(detail==""){%>
+          <div class="form-group">
+              <input class="form-control" required type="text" placeholder="Your name" name="name1">
+          </div>
+          <div class="form-group">
+              <input class="form-control" required type="text" placeholder="Phone-number" name="phonenumber1">
+          </div>
+        <%}%>
+          <div class="form-group">
+              <input class="form-control" type="text" required placeholder="Hostel-name" name="Hostel">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="text" required placeholder="Room-no" name="Room">
+          </div>
+              <button  class="btn btn-success btn-xs" type="submit" value="Click">Submit</button>
+
+        </form>
+    </div>
+
+  </div>
+  <div class="col-md-1">
+
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+<script src="/js/upload.js" charset="utf-8"></script>
+
+<%-include("partials/footer")-%>

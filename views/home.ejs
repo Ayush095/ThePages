@@ -1,0 +1,275 @@
+<%- include("partials/header") -%>
+<div class="page-body-wrapper">
+  <section id="home" class="home">
+    <div class="container">
+      <div class="row mt-0">
+        <div class="col-sm-12">
+          <div class="main-banner">
+            <div class="d-sm-flex justify-content-between">
+              <div data-aos="zoom-in-up">
+                <div class="banner-title">
+                    <h3 class="font-weight-medium"><%if(detail){%> Hi,<%=detail.name%>.<%}%><br> We Sell For
+                    Your "Profit" Because Having A Book
+                    is a sign Of Intelligence.
+
+                  </h3>
+                </div>
+                <p class="mt-3">Create an account, post the book, and sell away.Meet on-campus to do the deal.
+
+                  <br>
+                  Buy and sell textbooks directly with student on-campus.No shipping, no credit cards, no hassles... All Free!
+                </p><%if(detail==""){%>
+                <a href="/signin" class="btn btn-secondary mt-3 font-weight-normal">SignIn</a>
+                <%}%>
+              </div>
+              <div class="mt-5 mt-lg-0">
+                <img src="images/group1.svg" alt="marsmello" class="img-fluid" data-aos="zoom-in-up">
+              </div>
+            </div>
+
+              <form class="form-group home-form " method="GET" action="/books"  data-aos="flip-left" data-aos-duration="1500" >
+                <div class="row justify-content-center "style="">
+                  <form class=" mt-5 shadow float-left" method="GET" action="/books">
+                    <div class="search-box mt-5"><input type="text" placeholder="Search book by Name,Author,Subject" name="searchBook" class="my-0" /><span></span></div>
+                  </form>
+                </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="our-services" id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h5 class="text-dark">We’re offering because</h5>
+          <h3 class="font-weight-medium text-dark mb-5">A TextBooks Never Gets Old </h3>
+        </div>
+      </div>
+      <div class="row" data-aos="fade-up">
+        <div class="col-sm-4 text-center text-lg-left">
+          <div class="services-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+            <img src="images/integrated-marketing.svg" alt="integrated-marketing" data-aos="zoom-in">
+            <h6 class="text-dark mb-3 mt-4 font-weight-medium">Buy
+            </h6>
+            <p>You can buy things like books and courses
+              from your university students.For more
+              Check our buy section.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-4 text-center text-lg-left">
+          <div class="services-box"   data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+            <img src="images/design-development.svg" alt="design-development" data-aos="zoom-in">
+            <h6 class="text-dark mb-3 mt-4 font-weight-medium">Sell
+            </h6>
+            <p>Easily sell by posting
+              image of thing and other important details
+              For more check our sell section.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-4 text-center text-lg-left">
+          <div class="services-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+            <img src="images/digital-strategy.svg" alt="digital-strategy" data-aos="zoom-in">
+            <h6 class="text-dark mb-3 mt-4 font-weight-medium">Digital
+              Strategy
+            </h6>
+            <p>We try to digitalise the basic need
+              of the university students and try to save
+              the money and yours precious time.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row" data-aos="fade-up">
+        <div class="col-sm-4 text-center text-lg-left">
+          <div class="services-box  pb-lg-0" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+            <img src="images/digital-marketing.svg" alt="digital-marketing" data-aos="zoom-in">
+            <h6 class="text-dark mb-3 mt-4 font-weight-medium">Fill
+              Precisely
+            </h6>
+            <p>Please fill correct details  you maybe
+              very helpful for other student it also helps
+              to make the website more upstanding.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-4 text-center text-lg-left">
+          <div class="services-box pb-lg-0" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+            <img src="images/growth-strategy.svg" alt="growth-strategy" data-aos="zoom-in">
+            <h6 class="text-dark mb-3 mt-4 font-weight-medium">No middle Man
+            </h6>
+            <p>We are not here for our profit.
+              This platform is for you.It also
+              help you interact with other students
+              in the university.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-4 text-center text-lg-left">
+          <div class="services-box pb-0" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+            <img src="images/saving-strategy.svg" alt="saving-strategy" data-aos="zoom-in">
+            <h6 class="text-dark mb-3 mt-4 font-weight-medium">Saving
+              Help
+            </h6>
+            <p>If you are facing any issue on regarding the website.
+               Pleae contact us by check our contact us section.
+               And also we frequently asked  question
+               in the contact us section that may be helpful for
+               your problem.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="our-process" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6" data-aos="fade-up">
+          <h5 class="text-dark">Our work process</h5>
+          <h3 class="font-weight-medium text-dark">Discover New Knowledge Only For You!</h3>
+          <h5 class="text-dark mb-3">  After All,Knowledge will Make the Difference,</h5>
+          <p class="font-weight-medium mb-4">There’s no point keeping those old textbooks   <br>
+          around to gather dust. Sell your textbooks to students who need them.
+          </p>
+          <div class="d-flex justify-content-start mb-3">
+            <img src="images/tick.png" alt="tick" class="mr-3 tick-icon"  >
+            <p class="mb-0">All Books At Afordable Price </p>
+          </div>
+          <div class="d-flex justify-content-start mb-3">
+            <img src="images/tick.png" alt="tick" class="mr-3 tick-icon"  >
+            <p class="mb-0">New Courses to Brushup Your Skills, Just Few Steps Away </p>
+          </div>
+          <div class="d-flex justify-content-start">
+            <img src="images/tick.png" alt="tick" class="mr-3 tick-icon"  >
+            <p class="mb-0">No Hustle,And Going Miles Away Just To Sell Books Away</p>
+          </div>
+        </div>
+        <div class="col-sm-6 text-right" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+          <img src="images/idea.png" alt="idea" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="our-projects" id="projects">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-sm-12">
+          <div class="d-sm-flex justify-content-between align-items-center mb-2">
+            <h3 class="font-weight-medium text-dark ">"Pages",Success At A Glance</h3>
+            <div><a href="/books" class="btn btn-outline-primary">Buy Now</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <section class="testimonial" id="testimonial">
+    <div class="container">
+      <div class="row  mt-md-0 mt-lg-4">
+        <div class="col-sm-6 text-white" data-aos="fade-up">
+          <p class="font-weight-bold mb-3">Testimonials</p>
+          <h3 class="font-weight-medium">Our customers are our <br>biggest fans</h3>
+          <ul class="flipster-custom-nav">
+            <li class="flipster-custom-nav-item">
+              <a href="javascript:;" class="flipster-custom-nav-link" title="0"></a>
+            </li>
+            <li class="flipster-custom-nav-item">
+              <a href="javascript:;" class="flipster-custom-nav-link"  title="1"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-6" data-aos="fade-up">
+          <div id="testimonial-flipster">
+            <ul>
+              <li>
+                <div class="testimonial-item">
+                  <img src="images/testimonial/testimonial2.jpeg" alt="icon" class="testimonial-icons">
+                  <p>Each dream and every success is in your reach,when your idea starts you, hardwork fuels you and passion drives you.
+                  </p>
+                  <h6 class="testimonial-author">Haniket</h6>
+                  <p class="testimonial-destination">Co-Founder</p>
+                </div>
+              </li>
+              <li>
+                <div class="testimonial-item">
+                  <img src="images/testimonial/testimonial1.jpg" alt="icon" class="testimonial-icons">
+                  <p> Many of life's failures are people who did not realize how close they were to success when they gave up.
+                  </p>
+                  <h6 class="testimonial-author"> Ayush</h6>
+                  <p class="testimonial-destination">Co-Founder</p>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="clients pt-5 mt-5"  data-aos="fade-up" data-aos-offset="-400">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 my-3">
+          <h2 class="text-secondary px-3">Can't find what you are searching?? Have a look Here</h2>
+        </div>
+        <div class=" col-md-6 col-sm-6 col-lg ">
+          <div class="d-sm-flex justify-content-between align-items-center">
+        <a href="https://www.coursera.org/"><img src="images/coursera-logo1.svg" style="width:200px" alt="deloit" class="p-2 p-lg-0" data-aos="fade-down"  data-aos-offset="-400"></a>
+        <a href="https://www.edx.org/"><img src="images/edx-logo.svg" style="width:100px;hight:40px" alt="erricson" class="p-2 p-lg-0" data-aos="fade-up"  data-aos-offset="-400"></a>
+        <a href="https://www.udemy.com/"><img src="images/udemy-logo.svg" style="width:200px" alt="netflix" class="p-2 p-lg-0" data-aos="fade-down"  data-aos-offset="-400"></a>
+        <a href="https://www.amazon.in/s?k=books&ref=nb_sb_noss_2"><img src="images/amazon-logo.svg" style="width:200px" alt="instagram" class="p-2 p-lg-0" data-aos="fade-up"  data-aos-offset="-400"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="pricing-list mb-5" id="plans">
+    <div class="">
+      <div class="row"  >
+        <div class="col-sm-12 ">
+          <div class="pricing-box signUp-Box">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="d-sm-flex justify-content-between align-items-center mb-2">
+                  <div>
+                    <h3 class="font-weight-medium text-light text-center mb-40">Don't have an Account?<br>Sign Up now....It's "Free"</h3><br>
+                    <h5 class="text-light  ">SignUp now to unlock features of "Pages",it's lots more what you have seen yet and on-top its completly Free.
+                                             So why waiting hit the Sign-Up button </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="/signup" class="btn btn-dark">Sign-Up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script type="text/javascript">
+
+  $(window).scroll(function () {
+  if ($(window).scrollTop() >= 100) {
+  $('.navbar').css('background','#3c37f1 ');
+  } else {
+  $('.navbar').css('background','transparent');
+  }
+  });
+  // $(window).scroll(function() {
+  //   if ($(document).scrollTop() > 750 && $("#home-modal").attr("displayed") === "false") {
+  //     $('#home-modal').modal('show');
+  //     $("#home-modal").attr("displayed", "true");
+  //   }
+  // });
+  // $('#modal').modal('hide');
+
+</script>
+
+<%- include("partials/footer") -%>

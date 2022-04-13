@@ -1,0 +1,79 @@
+<%- include("partials/header") -%>
+
+
+<% if(msg !=''){%>
+       <div class="alert alert-success mt-5 pt-5 mb-0 pb-0">
+     <strong>Success!</strong> <%= msg %> (<%=qty%>)
+         </div>
+     <% } %>
+
+<div class="row justify-content-center" style="margin-top:90px;margin-bottom:10px;">
+
+<div class="col-md-6 mx-auto ">
+  <form class=" mx-auto   " method="GET" action="/books">
+    <input type="text"placeholder="Search by Name,Author,Subject"  class=" form-control border-primary rounded py-3  " style="z-index:20;opacity:1;"  name="searchBook" data-aos="flip-left">
+
+    <!-- <div class="search-box "><input type="text" placeholder="Search by Name,Author,Subject" name="searchBook" class="my-0" /><span></span></div> -->
+  </form>
+</div>
+<div class="col-md-6 my-1 ">
+<%  if(qty>0){%>
+  <a href="/addtocart"  class="float-right px-5 h6"><span class="fa fa-shopping-cart fa-3x  " aria-hidden="true"></span>
+
+        (<%=qty%>)
+
+
+</a>
+<%}%>
+</div>
+</div>
+
+<div class="row  justify-content-center px-3">
+
+  <%founds.forEach(function(found){%>
+
+    <div class="col-md-4 col-6   py-2  my-3">
+      <div class="product-grid3 shadow " data-aos="fade-up">
+        <div class="product-image3 shadow-lg">
+          <img class="pic-1 bookpic" src="/uploads/<%=found.bookImage%>" style="width:100%;height:267px;  object-fit:cover;">
+            <a href="books/detailBooks/<%=found._id%>"><img class="pic-2 bookpic" style="width:100%;height:267px;  object-fit:cover;" src="/uploads/<%=found.bookImage%>"></a>
+          <ul class="social">
+            <li><a href="/books/detailBooks/<%=found._id%>"><i class="fa fa-shopping-bag"></i></a></li>
+            <li><a href="/add/<%=found._id%>"><i class="fa fa-shopping-cart"></i></a></li>
+          </ul>
+          <span class="product-new-label">New</span>
+        </div>
+        <div class="product-content">
+          <h3 class="title h4"><a href="#"> <%=found.subject%></a></h3>
+          <div class="price">
+            Rs <%=found.discountedPrice%>
+            <span>Rs <%=found.actualprice%>.00</span>
+          </div>
+          <!-- <ul class="rating">
+            <li class="fa fa-star"></li>
+            <li class="fa fa-star"></li>
+            <li class="fa fa-star"></li>
+            <li class="fa fa-star"></li>
+            <li class="fa fa-star disable"></li>
+          </ul> -->
+        </div>
+
+  </div>
+    </div>
+
+    <%})%>
+    <%-include("partials/hr")-%>
+</div>
+<script type="text/javascript">
+  'use strict';
+
+  var searchBox = document.querySelectorAll('.search-box input[type="text"] + span');
+
+  searchBox.forEach((elm) => {
+  elm.addEventListener('click', () => {
+    elm.previousElementSibling.value = '';
+  });
+  });
+</script>
+
+<%- include("partials/footer") -%>
